@@ -1,6 +1,14 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:initial_project/core/service/easy_loading_service.dart';
+
+import 'core/service/bloc_observer.dart';
 
 void main(){
+  WidgetsFlutterBinding.ensureInitialized();
+
+  Bloc.observer = MyBlocObserver();
+  ConfigLoading().showLoading();
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
