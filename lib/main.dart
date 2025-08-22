@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:initial_project/core/routes/routes_generator.dart';
 import 'package:initial_project/core/service/easy_loading_service.dart';
 
 import 'core/di/injectable_initializer.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      onGenerateRoute: RoutesGenerator.onGenerateRoute,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),);
